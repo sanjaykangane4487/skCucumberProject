@@ -11,8 +11,8 @@ import io.cucumber.junit.CucumberOptions;
 		features = "src/test/java/features",
 		glue = "stepDefinations",
 		tags = {"@regression"},
-		plugin = {"pretty","html:target/cucumber","json:target/cucumber.json","junit:target/cuckes.xml"},
-		monochrome = true
+		plugin = {"pretty","html:target/cucumber","json:target/cucumber.json","junit:target/cuckes.xml"}
+		
 		)
 
 public class TestRunner {

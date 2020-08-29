@@ -23,4 +23,9 @@ public class Hooks {
 		System.out.println("This is after regression test");
 		System.out.println("*******************************************************");
 	}
+	@After()
+	public void afterValidation2() {
+		System.out.println("browser closed");
+		System.out.println("*******************************************************");
+	}
 }
