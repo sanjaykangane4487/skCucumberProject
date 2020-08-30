@@ -3,7 +3,7 @@ package stepDefinations;
 import io.cucumber.java.Before;
 import io.cucumber.java.After;
 
-public class Hooks {
+public class Hooks extends BaseDriver{
 
 	@Before("@smoke")
 	public void beforeValidation() {
@@ -23,9 +23,11 @@ public class Hooks {
 		System.out.println("This is after regression test");
 		System.out.println("*******************************************************");
 	}
-	@After()
+	@After("@regressionTest,@smokeTest")
 	public void afterValidation2() {
-		System.out.println("browser closed");
+		System.out.println("This is after regression test");
+		driver.quit();
 		System.out.println("*******************************************************");
 	}
+	
 }

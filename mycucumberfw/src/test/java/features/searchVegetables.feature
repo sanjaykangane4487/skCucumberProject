@@ -3,10 +3,11 @@ Feature: Business requirement is to verify user is able to search vegetables usi
 Background: 
 	Given user is on Greencart landing page 
 	
+@smokeTest
 Scenario: Search for item and validate result 
 	When user searches for "Cucumber" vegetable 
 	Then "Cucumber" results are displayed 
-	
+@regressionTest
 Scenario: Search for item and validate result 
 	When user searches for "Brinjal" vegetable 
 	Then "Brinjal" results are displayed 

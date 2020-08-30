@@ -18,11 +18,9 @@ public class searchVegStepDefinations {
 
     @Given("^user is on Greencart landing page$")
     public void user_is_on_greencart_landing_page() throws Throwable {
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\main\\java\\resources\\chromedriver.exe");
-        driver = new ChromeDriver();
+        driver = BaseDriver.driverInitialization();
         driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        
      }
 
     @When("^user searches for \"([^\"]*)\" vegetable$")
